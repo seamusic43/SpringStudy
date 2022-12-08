@@ -8,11 +8,4 @@
     	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
        
-    <context:property-placeholder location="classpath:config/database.properties"/>
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-    	<property name="driverClass" value="${db.driverClass}"/>
-    	<property name="url" value="${db.url}" />
-    	<property name="username" value="${db.username}" />
-    	<property name="password" value="${db.password}" />
-    </bean>
 </beans>
