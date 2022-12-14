@@ -23,6 +23,8 @@ public class BbsController {
     
     @GetMapping("")
     public String index() {
+    	bbsService.registArticle(new Article(4, "park", "exception 테스트", "테스트"));
+    	//bbsService.testService();
     	return "index";
     }
     
@@ -39,6 +41,7 @@ public class BbsController {
     @ResponseBody
     public Article write(@RequestBody Article article) {
     	System.out.print("write test");
+    	this.bbsService.registArticle(article);
     	Article a = article;
     	return a;
     }

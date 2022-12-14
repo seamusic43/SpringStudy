@@ -11,9 +11,13 @@ public class ArticleDAO {
 	@Autowired
 	SqlSession sqlSession;
 	
+	public ArticleDAO() {
+		
+	}
+	
     public void insertArticle(Article article) {
     	System.out.print(article);
-    	sqlSession.insert("mappers.article-mapper.insertArticle",article);
+    	sqlSession.insert("mappers.article-mapper.insertArticleai",article);
         System.out.println("Insert OK");
     }
 

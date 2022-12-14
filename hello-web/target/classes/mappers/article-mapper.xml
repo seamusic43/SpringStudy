@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mappers.article-mapper">
 	<insert id="insertArticle" parameterType="kr.co.study.hello.vo.Article">
-		insert into (article_id, author, title, content)
+		insert into article (article_id, author, title, content)
 		value (#{articleId}, #{author}, #{title}, #{content} )
 	</insert>
 	<select id="selectAritcleById" 
